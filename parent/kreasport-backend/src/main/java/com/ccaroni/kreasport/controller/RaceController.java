@@ -1,6 +1,6 @@
 package com.ccaroni.kreasport.controller;
 
-import com.ccaroni.kreasport.dto.Race;
+import com.ccaroni.kreasport.domain.Race;
 import com.ccaroni.kreasport.exception.RaceIdNotSameException;
 import com.ccaroni.kreasport.exception.RaceNotFoundException;
 import com.ccaroni.kreasport.repository.RaceRepository;

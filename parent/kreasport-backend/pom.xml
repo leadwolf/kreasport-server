@@ -10,7 +10,6 @@
 	</parent>
 
 	<artifactId>kreasport</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>kreasport</name>
@@ -23,6 +22,15 @@
 	</properties>
 
 	<dependencies>
+
+        <!--Add dependency to common submodule-->
+        <dependency>
+            <!-- This shouldn't be a dep which is packaging: pom -->
+            <groupId>${project.groupId}</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -67,6 +75,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.3.5.RELEASE</version>
 			</plugin>
 
             <!--Compile Using 1.8-->

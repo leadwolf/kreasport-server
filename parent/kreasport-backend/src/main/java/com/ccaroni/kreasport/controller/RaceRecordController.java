@@ -1,6 +1,6 @@
 package com.ccaroni.kreasport.controller;
 
-import com.ccaroni.kreasport.dto.RaceRecord;
+import com.ccaroni.kreasport.domain.RaceRecord;
 import com.ccaroni.kreasport.exception.RaceRecordNotFoundException;
 import com.ccaroni.kreasport.repository.RaceRecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;

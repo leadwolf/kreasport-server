@@ -1,6 +1,6 @@
 package com.ccaroni.kreasport.repository;
 
-import com.ccaroni.kreasport.dto.Race;
+import com.ccaroni.kreasport.domain.Race;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
