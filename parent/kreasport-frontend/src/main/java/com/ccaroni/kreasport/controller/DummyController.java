@@ -2,6 +2,7 @@ package com.ccaroni.kreasport.controller;
 
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
+import com.ccaroni.kreasport.domain.Race;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestBody;

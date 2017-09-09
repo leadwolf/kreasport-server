@@ -12,7 +12,7 @@
   <modules>
 	<module>common</module>
 	<module>kreasport-backend</module>
-	<!--<module>kreasport-frontend</module>-->
+	<module>kreasport-frontend</module>
   </modules>
 
     <properties>
