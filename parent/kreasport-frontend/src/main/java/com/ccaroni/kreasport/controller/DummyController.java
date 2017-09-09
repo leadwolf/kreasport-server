@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ccaroni.kreasport.domain.Race;
-
 /**
  * Created by Master on 16/06/2017.
  */

@@ -1,9 +1,9 @@
 package com.ccaroni.kreasport.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Transient;
 
 /**
  * Created by Master on 04/04/2017.
@@ -69,14 +69,9 @@ public class BasePoint {
         this.longitude = longitude;
     }
 
-    @Transient
+    @JsonIgnore
     public double[] getLocation() {
         return new double[]{latitude, longitude};
     }
 
-	@Override
-	public String toString() {
-		return "BasePoint [id=" + id + ", title=" + title + ", description=" + description + ", latitude=" + latitude
-				+ ", longitude=" + longitude;
-	}
 }
