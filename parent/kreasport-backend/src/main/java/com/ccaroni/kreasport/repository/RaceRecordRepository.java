@@ -9,4 +9,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface RaceRecordRepository extends MongoRepository<RaceRecord, String> {
+
+    RaceRecord findById(String id);
+
+    void deleteById(String id);
 }

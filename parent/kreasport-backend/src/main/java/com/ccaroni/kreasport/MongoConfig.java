@@ -1,5 +1,6 @@
 package com.ccaroni.kreasport;
 
+import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import org.springframework.context.annotation.Configuration;
@@ -13,13 +14,14 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @EnableMongoRepositories(basePackages = "com.ccaroni.kreasport.repository")
 public class MongoConfig extends AbstractMongoConfiguration {
 
+
     @Override
     protected String getDatabaseName() {
         return "kreasport-mongodb";
     }
 
     @Override
-    public MongoClient mongoClient() {
+    public Mongo mongo() throws Exception {
         String MONGO_URI = System.getenv("MONGO_MLAB");
         MongoClientURI uri = new MongoClientURI(MONGO_URI);
         return new MongoClient(uri);

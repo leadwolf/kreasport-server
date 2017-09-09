@@ -42,7 +42,7 @@ public class RaceRecordController {
     @RequestMapping(path = "/{id}", method = GET)
     public RaceRecord getRaceRecordById(@PathVariable("id") String id) {
         verifyRecordExists(id);
-        return raceRecordRepository.findById(id).get();
+        return raceRecordRepository.findById(id);
     }
 
     @RequestMapping(path = "{id}", method = DELETE)
@@ -76,7 +76,7 @@ public class RaceRecordController {
 
 
     private void verifyRecordExists(String id) {
-        if (!raceRecordRepository.findById(id).isPresent())
+        if (raceRecordRepository.findById(id) == null)
             throw new RaceRecordNotFoundException(id);
     }
 

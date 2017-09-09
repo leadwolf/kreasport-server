@@ -62,7 +62,7 @@ public class RaceController {
     @RequestMapping(path = "/{id}", method = GET)
     public Race getRaceById(@PathVariable("id") String id) {
         verifyRaceExists(id);
-        return raceRepository.findById(id).get();
+        return raceRepository.findById(id);
     }
 
     @RequestMapping(path = "{id}", method = DELETE)
@@ -74,7 +74,7 @@ public class RaceController {
 
 
     private void verifyRaceExists(String id) {
-        if (!raceRepository.findById(id).isPresent())
+        if (raceRepository.findById(id) == null)
             throw new RaceNotFoundException(id);
 
     }

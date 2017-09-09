@@ -10,4 +10,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RaceRepository extends MongoRepository<Race, String> {
 
+    Race findById(String id);
+
+    void deleteById(String id);
+
 }
