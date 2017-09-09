@@ -39,6 +39,7 @@
     </dependencies>
 
 
+    <!--Get Spring Boot here instead of declaring as parent-->
     <dependencyManagement>
         <dependencies>
             <!--Spring Boot-->
