@@ -76,6 +76,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.3.5.RELEASE</version>
+                <configuration>
+                    <mainClass>com.ccaroni.kreasport.KreasportApplication</mainClass>
+                </configuration>
 			</plugin>
 
             <!--Compile Using 1.8-->
